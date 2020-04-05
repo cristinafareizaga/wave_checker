@@ -1,8 +1,10 @@
 import argparse
-import wave_checker.scrape_waves as sc
+import wave_checker.scrape as sc
+
 
 def analyze_waves(url):
-    sc.scrape(url)
+    sc.scrape_all(url)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Easy way to find the best waves by analyzing windguru')
