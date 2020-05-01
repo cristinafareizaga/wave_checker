@@ -1,8 +1,8 @@
 from bs4 import BeautifulSoup
 from selenium import webdriver
 import time
-import wave_checker.scrape_titles as sc
-import wave_checker.scrape_content as sr
+import wave_checker.scrape_url.scrape_titles as sc
+import wave_checker.scrape_url.scrape_content as sr
 
 
 def scrape_all (url):
@@ -13,4 +13,5 @@ def scrape_all (url):
     html = driver.page_source
     soup = BeautifulSoup(html)
     mix_models_titles, swell_table_titles = sc.scrape_titles(soup)
-    sr.contents(soup)
+    csv = sr.contents(soup)
+    return csv
