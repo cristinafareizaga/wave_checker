@@ -19,6 +19,8 @@ def get_contents(table):
         if i in [0, 1, 3, 6, 7, 9, 13]:
             for td in tds:
                 text = td.text
+                if text == "-":
+                    text = "0"
                 if text.strip() == "":
                     text = None
                 content.append(text)
