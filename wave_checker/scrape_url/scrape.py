@@ -13,7 +13,7 @@ def scrape_all (url,no_scrape):
     driver.get(url)
     time.sleep(5)
     html = driver.page_source
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, features="lxml")
     mix_models_titles, swell_table_titles = sc.scrape_titles(soup)
     csv = sr.contents(soup)
     return csv

@@ -1,6 +1,6 @@
 import argparse
 import wave_checker.scrape_url.scrape as sc
-import wave_checker.analysis as an
+import wave_checker.analysis.analysis as an
 
 def analyze_waves(url, no_scrape, orientation):
     csv = sc.scrape_all(url, no_scrape)
