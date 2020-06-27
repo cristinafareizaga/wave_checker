@@ -10,8 +10,9 @@ def analysis_csv(csv, orientation):
         days_hours, wind_speed, wind_gust, wind_direction, wave_level,orientation)
 
     pl.plot_best_moments(days_hours,best_moments_surfing_yes_no)
+
+    print("The best moments for surfing are:")
     print(best_moments_surfing)
-    print(best_moments_surfing_yes_no)
 
 # Data visualization
 # Mareas
